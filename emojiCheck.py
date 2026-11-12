@@ -1,12 +1,11 @@
 import re
 
-
 # Check if messege contains non clarke emoji using regex
 def has_clarke_nonEmoji(text: str) -> bool:
     return bool(_EMOJI_PATTERN.search(text))
 
 
-# will NOT pick up emojis from other channels
+# will NOT pick up emojis create from other channels
 # TODO: check for other channel emoji that dont start with :clarke*
 _EMOJI_PATTERN = re.compile(
 "["
