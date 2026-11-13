@@ -1,7 +1,7 @@
 import re
 
 # Check if messege contains non clarke emoji using regex
-def has_clarke_nonEmoji(text: str) -> bool:
+def check_clarke_nonEmoji(text: str) -> bool:
     return bool(_EMOJI_PATTERN.search(text))
 
 
