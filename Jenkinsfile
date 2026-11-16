@@ -6,7 +6,7 @@ pipeline {
     }
 
     parameters {
-        choice(name: 'ACTION', choices: ['Deploy', 'Delete'], description: 'Choose whether to deploy or remove the app')
+        choice(name: 'ACTION', choices: ['Deploy', 'Delete'], description: 'deploy or delete app')
     }
 
     stages {
@@ -18,6 +18,7 @@ pipeline {
                 withCredentials([string(credentialsId: 'discord-bot-token', variable: 'BOT_TOKEN')]) {
                     sh '''
                         set -eu
+                        echo "token length: ${#BOT_TOKEN}"
                         docker compose config --quiet
                         docker compose build
                     '''
