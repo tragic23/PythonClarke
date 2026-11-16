@@ -1,0 +1,26 @@
+2026-11-15 22:19:24 - Logged on as DictatorClarke#3764!
+
+leaved 
+2026-11-15 22:19:41 - tragic232143,
+
+<VoiceState self_mute=True self_deaf=True self_stream=False suppress=False requested_to_speak_at=None channel=<VoiceChannel id=708427931231191104 name='Yappybarra' rtc_region=None position=0 bitrate=64000 video_quality_mode=<VideoQualityMode.auto: 1> user_limit=0category_id=708427931231191101>>,
+
+<VoiceState self_mute=True self_deaf=True self_stream=False suppress=False requested_to_speak_at=None channel=None>
+
+
+
+entered
+2026-11-15 22:19:44 - tragic232143,
+
+<VoiceState self_mute=True self_deaf=True self_stream=False suppress=False requested_to_speak_at=None channel=None>,
+
+<VoiceState self_mute=True self_deaf=True self_stream=False suppress=False requested_to_speak_at=None channel=<VoiceChannel id=708427931231191104 name='Yappybarra' rtc_region=None position=0 bitrate=64000 video_quality_mode=<VideoQualityMode.auto: 1> user_limit=0category_id=708427931231191101>>
+
+
+
+leave
+2026-11-15 22:20:14 - tragic232143,
+
+<VoiceState self_mute=True self_deaf=True self_stream=False suppress=False requested_to_speak_at=None channel=<VoiceChannel id=708427931231191104 name='Yappybarra' rtc_region=None position=0 bitrate=64000 video_quality_mode=<VideoQualityMode.auto: 1> user_limit=0category_id=708427931231191101>>,
+
+<VoiceState self_mute=True self_deaf=True self_stream=False suppress=False requested_to_speak_at=None channel=None>
