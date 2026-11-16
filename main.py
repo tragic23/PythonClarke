@@ -51,7 +51,7 @@ async def on_raw_message_edit(payload):
     message = payload.message
 
     if message.author == bot.user: return  # Ignore the bot
-    
+
     message_content = payload.message.content
 
     
@@ -143,6 +143,7 @@ async def on_voice_state_update(member, before, after):
         log(f"stoped audio")
 
     source = discord.FFmpegPCMAudio("clarke_meow.mp3")
+    source = discord.PCMVolumeTransformer(source, volume=1.0)
     voice_client.play(source)
     log(f"playing audio")
 
