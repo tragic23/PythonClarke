@@ -143,7 +143,13 @@ async def on_voice_state_update(member, before, after):
         log(f"stoped audio")
 
     source = discord.FFmpegPCMAudio("clarke_meow.mp3")
-    source = discord.PCMVolumeTransformer(source, volume=1.0)
+    source = discord.PCMVolumeTransformer(discord.FFmpegPCMAudio(
+        source="clarke_meow.mp3"),
+        volume=1.0
+    )
+
+
+    
     voice_client.play(source)
     log(f"playing audio")
 
