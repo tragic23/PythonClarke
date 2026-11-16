@@ -46,9 +46,12 @@ async def on_message(message):
 
 @bot.event
 async def on_raw_message_edit(payload):
-    if message.author == bot.user: return  # Ignore the bot
+    
     
     message = payload.message
+
+    if message.author == bot.user: return  # Ignore the bot
+    
     message_content = payload.message.content
 
     
