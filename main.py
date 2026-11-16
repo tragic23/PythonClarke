@@ -112,40 +112,40 @@ async def on_member_join(member):
 
 
 # when member enter channel 
-# @bot.event
-# async def on_voice_state_update(member, before, after):
-#     if member == bot.user: return # ignore bot
-#     log(f'{member},\n\n{before},\n\n{after}')
+@bot.event
+async def on_voice_state_update(member, before, after):
+    if member == bot.user: return # ignore bot
+    log(f'{member},\n\n{before},\n\n{after}')
 
-#     if before.channel == after.channel or after.channel is None:
-#         return
+    if before.channel == after.channel or after.channel is None:
+        return
 
-#     target_channel = after.channel
-#     voice_client = member.guild.voice_client
-#     log(f"set vars")
+    target_channel = after.channel
+    voice_client = member.guild.voice_client
+    log(f"set vars")
 
-#     # move bot into channel
-#     if voice_client is None:
-#         log(f"connecting bot")
-#         voice_client = await target_channel.connect()
-#     else:
-#         await voice_client.move_to(target_channel)
-#         log(f"moved bot to {target_channel}")
+    # move bot into channel
+    if voice_client is None:
+        log(f"connecting bot")
+        voice_client = await target_channel.connect()
+    else:
+        await voice_client.move_to(target_channel)
+        log(f"moved bot to {target_channel}")
 
-#     await asyncio.sleep(0.5)
+    await asyncio.sleep(0.5)
 
-#     # stop if already play audio
-#     if voice_client.is_playing():
-#         voice_client.stop()
-#         log(f"stoped audio")
+    # stop if already play audio
+    if voice_client.is_playing():
+        voice_client.stop()
+        log(f"stoped audio")
 
-#     source = discord.FFmpegPCMAudio("clarke_meow.mp3")
-#     voice_client.play(source)
-#     log(f"playing audio")
+    source = discord.FFmpegPCMAudio("clarke_meow.mp3")
+    voice_client.play(source)
+    log(f"playing audio")
 
-#     await asyncio.sleep(60)
-#     await voice_client.disconnect()
-#     log(f"Clarke lefted")
+    await asyncio.sleep(60)
+    await voice_client.disconnect()
+    log(f"Clarke lefted")
         
 
         
